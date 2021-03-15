@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">LoginForm</string>
+<string-array name="operation">
 
+    <item>Add</item>
+    <item>Subtract</item>
+    <item>Multiply</item>
+    <item>Divide</item>
+</string-array>
 
 </resources>
