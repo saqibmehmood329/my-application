@@ -42,14 +42,14 @@ public class MainActivity3 extends AppCompatActivity {
         resume++;
         OnResume=findViewById(R.id.OnResume);
         OnResume.setText("OnResume() Calls:"+resume);
-        Log.i("MainActivity3","OnStart is called");
+        Log.i("MainActivity3","OnResume method is called");
     }
     protected void onRestart(){
         super.onRestart();
         restart++;
         OnRestart=findViewById(R.id.OnRestart);
         OnRestart.setText("OnRestart() Calls:"+restart);
-        Log.i("MainActivity3","OnStart is called");
+        Log.i("MainActivity3","OnRestart method is called");
     }
     protected void onPause(){
         super.onPause();

@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ActivityLifeCycle extends AppCompatActivity {
-private TextView OnCreate,OnStart,OnResume,OnRestart;
-private Button btnStartActivityTwo;
-private int create,start,resume,restart=0;
+private TextView OnCreate,OnStart,OnResume,OnRestart;   // initializes TextViews
+private Button btnStartActivityTwo;                     // Initialize Button for starting Activity Two
+private int create,start,resume,restart=0;              // Variables for counting
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,26 +30,26 @@ private int create,start,resume,restart=0;
             }
         });
     }
-    protected void onStart(){
+    protected void onStart(){               // OnStart Method
         super.onStart();
         start++;
         OnStart=findViewById(R.id.OnStart);
         OnStart.setText("Onstart() Calls:"+start);
-        Log.i("ActivityLifeCycle","OnStart is called");
+        Log.i("ActivityLifeCycle","OnStart method is called");
     }
     protected void onResume(){
         super.onResume();
         resume++;
         OnResume=findViewById(R.id.OnResume);
         OnResume.setText("OnResume() Calls:"+resume);
-        Log.i("ActivityLifeCycle","OnStart is called");
+        Log.i("ActivityLifeCycle","OnResume method is called");
     }
     protected void onRestart(){
         super.onRestart();
         restart++;
         OnRestart=findViewById(R.id.OnRestart);
         OnRestart.setText("OnRestart() Calls:"+restart);
-        Log.i("ActivityLifeCycle","OnStart is called");
+        Log.i("ActivityLifeCycle","OnRestart method is called");
     }
     protected void onPause(){
         super.onPause();
